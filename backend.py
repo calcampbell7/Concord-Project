@@ -3,7 +3,9 @@ from pydantic import BaseModel
 
 from concord3 import generate_concordance
 
+
 app = FastAPI()
+
 
 class ConcordanceRequest(BaseModel):
     exclusion_words: str
@@ -24,10 +26,7 @@ def create_concordance(request: ConcordanceRequest):
         if line.strip()
     ]
 
-    output_lines = generate_concordance(
-        body_lines,
-        exclusion_words
-    )
+    output_lines = generate_concordance(body_lines, exclusion_words)
 
     return {
         "lines": output_lines,

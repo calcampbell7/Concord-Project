@@ -30,6 +30,9 @@ dist/
 dist-ssr/
 coverage/
 
+# Vercel local project metadata
+.vercel/
+
 # Editor and IDE settings
 .idea/
 .vscode/

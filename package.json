@@ -1,0 +1,7 @@
+{
+  "name": "concord-project",
+  "private": true,
+  "scripts": {
+    "build": "npm --prefix frontend ci && npm --prefix frontend run build"
+  }
+}
